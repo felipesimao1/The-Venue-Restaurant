@@ -3,5 +3,65 @@
 {% block title %}Homepage{% endblock %}
 
 {% block content %}
-<h1>homepage </h1>
+
+    <div class="hamburger_bar trans_400 d-flex flex-row align-items-center justify-content-start">
+		<div class="hamburger">
+			<div class="menu_toggle d-flex flex-row align-items-center justify-content-start">
+				<span>menu</span>
+				<div class="hamburger_container">
+					<div class="menu_hamburger">
+						<div class="line_1 hamburger_lines" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+						<div class="line_2 hamburger_lines" style="visibility: inherit; opacity: 1;"></div>
+						<div class="line_3 hamburger_lines" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <div class="home">
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{% static 'images/home.jpg' %}" data-speed="0.8"></div>
+		<div class="home_container">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="home_content text-center">
+							<div class="home_subtitle page_subtitle">The Venue is</div>
+							<div class="home_title"><h1>An Extraordinery Experience</h1></div>
+							<div class="home_text ml-auto mr-auto">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="scroll_icon"></div>
+	</div>
+
+    <div class="intro">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="intro_content">
+						<div class="intro_subtitle page_subtitle">Something new</div>
+						<div class="intro_title"><h2>An Extraordinery Experience</h2></div>
+						<div class="intro_text">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus. Ut non justo eleifend, facilisis nibh ut, interdum odio. Suspendisse potenti. Vivamus luctus diam eu neque rutrum, vitae aliquet dolor venenatis. Nulla consequat fringilla massa.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xl-4 col-md-6 intro_col">
+							<div class="intro_image"><img src="{% static 'images/intro_1.jpg' %}" alt="https://unsplash.com/@quanle2819"></div>
+						</div>
+						<div class="col-xl-4 col-md-6 intro_col">
+							<div class="intro_image"><img src="{% static 'images/intro_2.jpg' %}" alt="https://unsplash.com/@fabmag"></div>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+	</div>
+
+
 {% endblock %}
