@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-3o6mg7s#cg25brf)2lw7s@m)2&gs(2-+x63dw&yi%u6lq%q1$=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['the-venue-restaurant-03ece792278a.herokuapp.com']
+ALLOWED_HOSTS = ['the-venue-restaurant-03ece792278a.herokuapp.com','127.0.0.1']
 #ALLOWED_HOSTS = ['thevenue.herokuapp.com',]
 
 
