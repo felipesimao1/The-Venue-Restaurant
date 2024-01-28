@@ -24,6 +24,7 @@
 1. Fonts
 ***********/
 
+
 @import url('https://fonts.googleapis.com/css?family=Alex+Brush|Great+Vibes|PT+Sans+Narrow:400,700');
 @font-face
 {
@@ -126,10 +127,7 @@ p a:hover::after
 	background: rgba(196, 171, 159, 0.5);
 	color: #FFFFFF;
 }
-p::selection
-{
 	
-}
 h1{font-size: 48px;}
 h2{font-size: 36px;}
 h3{font-size: 24px;}
@@ -144,15 +142,8 @@ h1, h2, h3, h4, h5, h6
 	line-height: 1.2;
 	color: #232323;
 }
-h1::selection, 
-h2::selection, 
-h3::selection, 
-h4::selection, 
-h5::selection, 
-h6::selection
-{
 	
-}
+
 .form-control
 {
 	color: #db5246;
@@ -1098,8 +1089,6 @@ section
     -ms-appearance: none;
     -o-appearance: none;
     appearance: none;
-    -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-    -webkit-user-select: none;
     background: transparent;
 	width: 210px;
 	height: 52px;

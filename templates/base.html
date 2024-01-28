@@ -21,44 +21,148 @@
     <link href="{% static 'plugins/jquery-timepicker/jquery.timepicker.css' %}" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="{% static 'css/main_styles.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/about_responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'css/menu.css' %}">
+    <link rel="stylesheet" href="{% static 'css/menu_responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+    <link rel="stylesheet" href="{% static 'css/contact_responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'css/elements.css' %}">
+    <link rel="stylesheet" href="{% static 'css/elements_responsive.css' %}">
 
     <title>Document</title>
 </head>
 
 <body>
 
-<div class="super_container">
+    <div class="super_container">
+        <div class="hamburger_bar trans_400 d-flex flex-row align-items-center justify-content-start">
+            <div class="hamburger">
+                <div class="menu_toggle d-flex flex-row align-items-center justify-content-start ">
+                    <span>menu</span>
+                    <div class="hamburger_container">
+                        <div class="menu_hamburger">
+                            <div class="line_1 hamburger_lines" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+                            <div class="line_2 hamburger_lines" style="visibility: inherit; opacity: 1;"></div>
+                            <div class="line_3 hamburger_lines" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nav bar-->
+        
         <header class="header">
             <div class="container">
                 <div class="row">
                     <div class="col">
                         <div class="header_content d-flex flex-row align-items-center justify-content-start">
                             <div class="logo">
-                                <a href="#">
+                                <a href="{% url 'homepage' %}">
                                     <div>The Venue</div>
-                                    <div>restaurant</div>
-                                </a>
+                                            <div>restaurant</div>
+                                        </a>
+                                    </div>
+                                    <nav class="main_nav">
+                                        <ul class="d-flex flex-row align-items-center justify-content-start">
+                                            <li><a href="{% url 'homepage' %}">home</a></li>
+                                            <li><a href="{% url 'aboutus' %}">about us</a></li>
+                                            <li><a href="{% url 'menu' %}">menu</a></li>
+                                            <li><a href="{% url 'contact' %}">contact</a></li>
+                                        </ul>
+                                    </nav>
+                                    <div class="reservations_phone ml-auto">Reservations: +34 586 778 8892</div>
+                                </div>
                             </div>
-                            <nav class="main_nav">
-                                <ul class="d-flex flex-row align-items-center justify-content-start">
-                                    <li><a href="index.html">home</a></li>
-                                    <li><a href="about.html">about us</a></li>
-                                    <li><a href="menu.html">menu</a></li>
-                                    <li><a href="#">delivery</a></li>
-                                    <li><a href="blog.html">blog</a></li>
-                                    <li><a href="contact.html">contact</a></li>
-                                </ul>
-                            </nav>
-                            <div class="reservations_phone ml-auto">Reservations: +34 586 778 8892</div>
+                        </div>
+                    </div>
+                </header>
+
+
+
+            <!-- Hamburger -->
+        
+            <div class="hamburger_bar trans_400 d-flex flex-row align-items-center justify-content-start">
+                <div class="hamburger">
+                    <div class="menu_toggle d-flex flex-row align-items-center justify-content-start">
+                        <span>menu</span>
+                        <div class="hamburger_container">
+                            <div class="menu_hamburger">
+                                <div class="line_1 hamburger_lines" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+                                <div class="line_2 hamburger_lines" style="visibility: inherit; opacity: 1;"></div>
+                                <div class="line_3 hamburger_lines" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </header>
+
+            <!-- Menu Hamburguer -->
+
+            <div class="menu trans_800">
+                <div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
+                    <ul>
+                        <li><a href="{% url 'homepage' %}">home</a></li>
+                        <li><a href="{% url 'aboutus' %}">about us</a></li>
+                        <li><a href="{% url 'menu' %}">menu</a></li>
+                        <li><a href="{% url 'contact' %}">contact</a></li>
+                    </ul>
+                </div>
+            
+                <div class="menu_reservations_phone ml-auto">Reservations: +34 586 778 8892</div>
+            </div>
     
 {% block content %}
 {% endblock %}
-</div>    
+    </div>    
+
+<!-- Footer -->
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+
+            <!-- Footer Logo -->
+            <div class="col-lg-3 footer_col">
+                <div class="footer_logo">
+                    <div class="footer_logo_title">The Venue</div>
+                    <div class="footer_logo_subtitle">restaurant</div>
+                </div>
+                <div class="copyright"><p style="line-height: 1.2;">Copyright &copy;<script>document.write(new Date().getFullYear());</script> 
+                </div>
+            </div>
+
+            <!-- Footer About -->
+            <div class="col-lg-6 footer_col">
+                <div class="footer_about">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus. Ut non justo eleifend, facilisis nibh ut, interdum odio.</p>
+                </div>
+            </div>
+
+            <!-- Footer Contact -->
+            <div class="col-lg-3 footer_col">
+                <div class="footer_contact">
+                    <ul>
+                        <li class="d-flex flex-row align-items-start justify-content-start">
+                            <div><div class="footer_contact_title">Address:</div></div>
+                            <div class="footer_contact_text">481 Creekside Lane Avila CA 93424</div>
+                        </li>
+                        <li class="d-flex flex-row align-items-start justify-content-start">
+                            <div><div class="footer_contact_title">Address:</div></div>
+                            <div class="footer_contact_text">+53 345 7953 32453</div>
+                        </li>
+                        <li class="d-flex flex-row align-items-start justify-content-start">
+                            <div><div class="footer_contact_title">Address:</div></div>
+                            <div class="footer_contact_text">yourmail@gmail</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
 
 
 
@@ -66,7 +170,7 @@
 <!-- Scripts-->
 
 <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
-<script src="{% static 'css/bootstrap-4.1.2/popper.j' %}"></script>
+<script src="{% static 'css/bootstrap-4.1.2/popper.js' %}"></script>
 <script src="{% static 'css/bootstrap-4.1.2/bootstrap.min.js' %}"></script>
 <script src="{% static 'plugins/greensock/TweenMax.min.js' %}"></script>
 <script src="{% static 'plugins/greensock/TimelineMax.min.js' %}"></script>
