@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Homepage{% endblock %}
+
+{% block content %}
+
+    
+    <div class="home" style="width: 100vw; height: 100vh;">
+        <div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{% static 'images/home.jpg' %}" data-speed="0.8"></div>
+		<div class="home_container">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="home_content text-center">
+							<div class="home_subtitle page_subtitle">Wellcome {{user.username}} !!</div>
+							<div class="home_title"><h1>Your Reservations/ Make a reservation</h1></div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="scroll_icon"></div>
+	</div>
+
+    <!-- Minhas Reservas -->
+
+    <!-- Minhas Reservas -->
+    <!-- Minhas Reservas -->
+    <div class="card">
+        <div class="card-header">
+            <h1>My Reservations</h1>
+        </div>
+        <div class="card-body">
+            <ul class="list-group">
+                {% for reservation in reservations %}
+                <li class="list-group-item">
+                    <strong>Date:</strong> {{ reservation.date }} | 
+                    <strong>Time:</strong> {{ reservation.time }} | 
+                    <strong>Table:</strong> {{ reservation.table }} | 
+                    <strong>Guests:</strong> {{ reservation.guests }}
+                </li>
+                <a href="{% url 'edit_reservation' reservation.id %}">Edit Reservation</a> or <a href="{% url 'delete_reservation' reservation.id %}">Delete Reservation</a>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    
+
+    <!-- Reservations -->
+
+    <form action="{% url 'make_reservation' %}" method="POST" id="res_form" class="res_form" style="color: black; justify-content: center; align-items: center; text-align: center;">
+        {% csrf_token %}
+        <div class="d-flex flex-sm-row flex-column align-items-center justify-content-center">
+            <input type="text" class="res_input" value="{{ request.user.username }}" style="color: black;"> <br>
+            <input type="text" class="res_input"value="{{ request.user.email }}" style="color: black;"> <br>
+            <input type="date" class="res_input" name="date" required style="color: black;"> <br>
+            
+            <select name="table" class="res_input" aria-placeholder="Table" required style="color: black;"> <!-- Corrigido -->
+                <option value="1">Table 1</option>
+                <option value="2">Table 2</option>
+                <option value="3">Table 3</option>
+                <option value="4">Table 4</option>
+            </select>
+            
+            <select name="time" class="res_input" required style="color: black;"> <!-- Corrigido -->
+                <option value="18:00">18:00</option>
+                <option value="19:00">19:00</option>
+                <option value="20:00">20:00</option>
+                <option value="21:00">21:00</option>
+            </select>
+            
+            <select name="guests" class="res_input" required style="color: black;"> <!-- Corrigido -->
+                <option value="1">1 Guest</option>
+                <option value="2">2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+            </select>
+            <input type="hidden" class="form-control" value="{{ request.user.username }}" name="username">
+        </div>
+        <button type="submit" class="res_button">Make a Reservation</button>
+    </form>
+{% endblock %}
