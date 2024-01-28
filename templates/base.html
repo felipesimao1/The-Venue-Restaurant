@@ -14,9 +14,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-4.1.2/bootstrap.min.css' %}">
     <link href="{% static 'plugins/font-awesome-4.7.0/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/owl.carousel.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/owl.theme.default.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/animate.css' %}">
     <link href="{% static 'plugins/colorbox/colorbox.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'plugins/jquery-timepicker/jquery.timepicker.css' %}" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="{% static 'css/main_styles.css' %}">
@@ -70,9 +67,14 @@
                                             <li><a href="{% url 'aboutus' %}">about us</a></li>
                                             <li><a href="{% url 'menu' %}">menu</a></li>
                                             <li><a href="{% url 'contact' %}">contact</a></li>
+                                            <li class="reservations_phone ml-auto"><a href="{% url 'login' %}">Login</a></li>
+                                            <li class="reservations_phone ml-auto"><a href="{% url 'signup' %}">Sign Up</a></li>
                                         </ul>
                                     </nav>
-                                    <div class="reservations_phone ml-auto">Reservations: +34 586 778 8892</div>
+
+                                    
+                                    
+                                    
                                 </div>
                             </div>
                         </div>
@@ -107,6 +109,8 @@
                         <li><a href="{% url 'aboutus' %}">about us</a></li>
                         <li><a href="{% url 'menu' %}">menu</a></li>
                         <li><a href="{% url 'contact' %}">contact</a></li>
+                        <li><a href="{% url 'login' %}">Login</a></li>
+                        <li><a href="{% url 'signup' %}">Sign Up</a></li>
                     </ul>
                 </div>
             
