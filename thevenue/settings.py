@@ -91,8 +91,6 @@ DATABASES = {
         'NAME': 'thevenue_db',
         'USER': 'postgres',
         'PASSWORD': 'admin',
-        'HOST': 'localhost',
-        'PORT': '5432',
     }
 }
 
