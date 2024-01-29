@@ -12,10 +12,12 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import dj_database_url
+import os
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+DATABASE_URL = os.getenv('DATABASE_URL')
 
 
 # Quick-start development settings - unsuitable for production
@@ -85,13 +87,17 @@ WSGI_APPLICATION = 'thevenue.wsgi.application'
 #    }
 #}
 
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#        'NAME': 'thevenue_db',
+#        'USER': 'postgres',
+#        'PASSWORD': 'admin',
+#    }
+#}
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'thevenue_db',
-        'USER': 'postgres',
-        'PASSWORD': 'admin',
-    }
+    'default': dj_database_url.config(default=DATABASE_URL)
 }
 
 
