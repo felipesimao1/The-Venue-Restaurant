@@ -1,13 +1,12 @@
 import time
 from django.shortcuts import get_object_or_404, redirect, render
-from django.contrib.auth.models import User
 from django.contrib.auth import logout as django_logout
 from django.contrib.auth import authenticate, login
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-from .models import Reservation
+from .models import Client, Reservation
 
 
 # Create your views here.
@@ -29,10 +28,13 @@ def login_view(request):
         username = request.POST.get('username')
         password = request.POST.get('password')
         user = authenticate(request, username=username, password=password)
+        
         if user is not None:
             login(request, user)
+            print('Login realizado com sucesso')
             return redirect('homepage')
         else:
+            print('Usuário ou senha inválidos')
             return render(request, 'login.html', {'error_message': 'Invalid credentials'})
     return render(request, 'login.html')
 
@@ -43,20 +45,24 @@ def signup_view(request):
         password = request.POST.get('password')
         password2 = request.POST.get('password2')
 
-        if password == password2:
-            if User.objects.filter(username=username).exists():
-                return render(request, 'signup.html', {'error_message': 'Username already exists'})
-            elif User.objects.filter(email=email).exists():
-                return render(request, 'signup.html', {'error_message': 'Email already exists'})
-            else:
-                user = User.objects.create_user(username=username, email=email, password=password)
-                login(request, user)
-                return redirect('homepage')
-        else:
+        # Verificar se as senhas coincidem
+        if password != password2:
+            # Se as senhas não coincidirem, você pode retornar uma mensagem de erro
             return render(request, 'signup.html', {'error_message': 'Passwords do not match'})
 
-    return render(request, 'signup.html')
+        # Verificar se o usuário já existe
+        if User.objects.filter(username=username).exists():
+            # Se o usuário já existe, você pode retornar uma mensagem de erro
+            return render(request, 'signup.html', {'error_message': 'Username already exists'})
 
+        # Criar um novo usuário
+        user = User.objects.create_user(username=username, email=email, password=password)
+
+        # Você pode fazer mais aqui, como redirecionar para a página de login ou página inicial
+        return redirect('login')
+    
+    return render(request, 'signup.html')
+    
 @login_required
 def logout(request):
     django_logout(request)

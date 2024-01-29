@@ -12,7 +12,7 @@
 				<div class="row">
 					<div class="col">
 						<div class="home_content text-center">
-							<div class="home_subtitle page_subtitle">Wellcome {{user.username}} !!</div>
+							<div class="home_subtitle page_subtitle">Wellcome {{client.user}} !!</div>
 							<div class="home_title"><h1>Your Reservations/ Make a reservation</h1></div>
 							
 						</div>
@@ -23,18 +23,16 @@
 		<div class="scroll_icon"></div>
 	</div>
 
-    <!-- Minhas Reservas -->
-
-    <!-- Minhas Reservas -->
-    <!-- Minhas Reservas -->
-    <div class="card">
+    <!-- Ny Reservations-->
+    <br>
+    <div class="card mt-3" style="color: black;">
         <div class="card-header">
             <h1>My Reservations</h1>
         </div>
         <div class="card-body">
-            <ul class="list-group">
+            <ul class="list-group mt-3">
                 {% for reservation in reservations %}
-                <li class="list-group-item">
+                <li class="list-group-item mt-3">
                     <strong>Date:</strong> {{ reservation.date }} | 
                     <strong>Time:</strong> {{ reservation.time }} | 
                     <strong>Table:</strong> {{ reservation.table }} | 
@@ -46,9 +44,8 @@
         </div>
     </div>
     
-
     <!-- Reservations -->
-
+    <br>
     <form action="{% url 'make_reservation' %}" method="POST" id="res_form" class="res_form" style="color: black; justify-content: center; align-items: center; text-align: center;">
         {% csrf_token %}
         <div class="d-flex flex-sm-row flex-column align-items-center justify-content-center">
@@ -80,4 +77,5 @@
         </div>
         <button type="submit" class="res_button">Make a Reservation</button>
     </form>
+    <br>
 {% endblock %}
