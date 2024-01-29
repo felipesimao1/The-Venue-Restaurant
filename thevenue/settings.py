@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
-import dj_database_url
+#import dj_database_url
 import os
 
 
@@ -87,18 +87,18 @@ WSGI_APPLICATION = 'thevenue.wsgi.application'
 #    }
 #}
 
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#        'NAME': 'thevenue_db',
-#        'USER': 'postgres',
-#        'PASSWORD': 'admin',
-#    }
-#}
-
 DATABASES = {
-    'default': dj_database_url.config(default=DATABASE_URL)
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'thevenue_db',
+        'USER': 'postgres',
+        'PASSWORD': 'admin',
+    }
 }
+
+#DATABASES = {
+#    'default': dj_database_url.config(default=DATABASE_URL)
+#}
 
 
 # Password validation
