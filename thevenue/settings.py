@@ -99,10 +99,10 @@ WSGI_APPLICATION = 'thevenue.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        'NAME': 'thevenue_aws_db',
-        'USER': 'felipesimao_db',
+        'NAME': 'thevenue_db_elephant',
+        'USER': 'postgres',
         'PASSWORD': 'admin123',
-        'HOST': 'database-1.chmc206wuedb.eu-north-1.rds.amazonaws.com',
+        'HOST': 'postgres://lqqzzzha:ixkFeXDUiwAsceaJgtOAXlZ2DvlMuxCX@kandula.db.elephantsql.com/lqqzzzha',
         'PORT': '5432',
     }
 }
