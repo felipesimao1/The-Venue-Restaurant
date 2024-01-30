@@ -75,7 +75,7 @@
                                                 
                                             {% else %}
 
-                                                <li class="reservations_phone ml-auto"><a href="{% url 'make_reservation' %}">Hello, User!</a></li>
+                                                <li class="reservations_phone ml-auto"><a href="{% url 'make_reservation' %}">Hello, {{user.username}}</a></li>
                                                 <li class="reservations_phone ml-auto"><a href="{% url 'make_reservation' %}">Reservation</a></li>
                                                 <li class="reservations_phone ml-auto"><a href="{% url 'logout' %}">Logout</a></li>
                                             {% endif %}
