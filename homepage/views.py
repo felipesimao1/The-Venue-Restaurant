@@ -91,7 +91,7 @@ def make_reservation(request):
         
         if reservation_date < current_date:
             # Se a data da reserva for no passado, exibir uma mensagem de erro
-            messages.error(request, 'A data da reserva não pode ser no passado. Por favor, escolha uma data futura.')
+            messages.error(request, 'The date cannot be in the past. Please choose another date.')
             return redirect('make_reservation')
 
         # Verificar se já existe uma reserva para a mesma data e hora
@@ -99,14 +99,14 @@ def make_reservation(request):
 
         if existing_reservation:
             # Se uma reserva já existir para a mesma data e hora, exibir uma mensagem de erro
-            messages.error(request, 'Já existe uma reserva para esta data e hora. Por favor, escolha outra data ou hora.')
+            messages.error(request, 'A reservation already exists for the same date and time. Please choose another date and time.')
             return redirect('make_reservation')
         else:
             # Criar uma nova reserva associada ao usuário atual
             reservation = Reservation.objects.create(date=date_str, table=table, time=time, guests=guests, user=request.user)
             
             # Redirecionar para a página de sucesso ou para a mesma página com uma mensagem de sucesso
-            messages.success(request, 'Sua reserva foi feita com sucesso!')
+            messages.success(request, 'Your reservation has been created successfully!')
             return redirect('make_reservation')  # ou ajuste conforme necessário
     else:
         # Obter todas as reservas existentes
