@@ -14,7 +14,7 @@ Before getting started, make sure you have the following requirements installed 
 
 ## Project Overview
 
-1. Homepage ![Alt text](images/readme1.png)
+1. ![Homepage](https://github.com/felipesimao1/The-Venue-Restaurant/assets/31260554/6cc43fe4-31f5-41df-b1fe-a8a9dbe3bf26)
 
 
 
