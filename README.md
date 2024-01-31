@@ -1,19 +1,53 @@
 # The Venue Restaurant
 
-"The Venue Restaurant" is a system where users can book a table for dinner. They also have the ability to update or cancel their reservations.
-In this project I used the knowledge I acquired about creating, updating, reading and deleting (CRUD) information using the Python language and the Django framework.
+"The Venue Restaurant" is a system where users can book a table for dinner. They also can update or cancel their reservations.
+In this project I used the knowledge I acquired about creating, updating, reading, and deleting (CRUD) information using the Python language and the Django framework.
 
 
 ## Prerequisites
 
-Before getting started, make sure you have the following requirements installed on your machine:
+1. Before getting started, make sure you have the following requirements installed on your machine:
 ```
 - Python
 - Django -4.1 (recommended)
 ```
+## Installation
+
+Follow these steps to install and set up the project:
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/your-username/the-venue-restaurant.git
+cd the-venue-restaurant
+```
+2. Delete the env directory
+  
+3. Start a new virtual environment (windows system)
+```bash
+python -m venv env
+source env/Scripts/activate
+```
+
+4. Install Requirements.txt
+```bash
+pip install -r requirements.txt
+```
+
+5. Start the project
+```bash
+python manage.py runserver
+```
+   
 
 ## Project Overview
 1.[Homepage](#homepage)
+2.[Login Page](#loginpage)
+3.[Sign Up](#signup)
+4.[Mobile Navigation](#mobilenavbar)
+5.[Logged and Make a reservation](#LoggedandMakeareservation)
+6.[Edit Reservation](#editingreservation)
+7.[Confirm Reservation](#confirmreservation)
 
 ## Homepage:
 ![Screenshot 2024-01-31 030950](https://github.com/felipesimao1/The-Venue-Restaurant/assets/31260554/13b91797-89da-4fc3-974f-d9e7b2f0aadc)
@@ -53,12 +87,4 @@ In the reservation editing area, the user will be informed of the current status
 
 When completing your changes or deleting your reservation a message will be displayed to show the user that the action was carried out successfully.
 
-## Installation
 
-Follow these steps to install and set up the project:
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/your-username/the-venue-restaurant.git
-cd the-venue-restaurant
