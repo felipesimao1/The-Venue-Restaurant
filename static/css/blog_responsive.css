@@ -116,10 +116,6 @@
 	}
 	.blog_col:nth-child(even)
 	{
-		-webkit-transform: none;
-		-moz-transform: none;
-		-ms-transform: none;
-		-o-transform: none;
 		transform: none;
 	}
 	.load_more_row

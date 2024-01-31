@@ -157,6 +157,12 @@ STATICFILES_DIRS = [
 ]
 STATIC_ROOT = 'staticfiles'
 
+from django.contrib.messages import constants as messages
+
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger',
+}
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 

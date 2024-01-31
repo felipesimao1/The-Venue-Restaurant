@@ -6,16 +6,16 @@
 
     
     <div class="home">
-		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{% static 'images/home.jpg' %}" data-speed="0.8"></div>
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{% static 'images/home.jpg' %}" data-speed="0.8" alt="homepage_image"></div>
 		<div class="home_container">
 			<div class="container">
 				<div class="row">
 					<div class="col">
 						<div class="home_content text-center">
 							<div class="home_subtitle page_subtitle">The Venue is</div>
-							<div class="home_title"><h1>An Extraordinery Experience</h1></div>
+							<div class="home_title"><h1>An Extraordinary Experience</h1></div>
 							<div class="home_text ml-auto mr-auto">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
+								<p>"Embark on a culinary adventure at our restaurant, where every visit promises an extraordinary experience. From the moment you step through our doors, you'll be greeted by tantalizing aromas and impeccable service."</p>
 							</div>
 						</div>
 					</div>
@@ -33,15 +33,15 @@
 						<div class="intro_subtitle page_subtitle">Something new</div>
 						<div class="intro_title"><h2>An Extraordinery Experience</h2></div>
 						<div class="intro_text">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus. Ut non justo eleifend, facilisis nibh ut, interdum odio. Suspendisse potenti. Vivamus luctus diam eu neque rutrum, vitae aliquet dolor venenatis. Nulla consequat fringilla massa.</p>
+							<p>"Step into a world of culinary delight at our restaurant, where every moment is an extraordinary experience. From the tantalizing aromas that greet you at the door to the impeccable service and sumptuous flavors that dance on your palate, each visit is a journey of culinary bliss. Join us and indulge in the magic of fine dining, where every dish tells a story and every bite leaves you craving for more."</p>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-xl-4 col-md-6 intro_col">
-							<div class="intro_image"><img src="{% static 'images/intro_1.jpg' %}" alt="https://unsplash.com/@quanle2819"></div>
+							<div class="intro_image"><img src="{% static 'images/intro_1.jpg' %}" alt="homepage_intro1"></div>
 						</div>
 						<div class="col-xl-4 col-md-6 intro_col">
-							<div class="intro_image"><img src="{% static 'images/intro_2.jpg' %}" alt="https://unsplash.com/@fabmag"></div>
+							<div class="intro_image"><img src="{% static 'images/intro_2.jpg' %}" alt="homepahe_intro2"></div>
 						</div>
 					</div>
 				</div>	
@@ -51,21 +51,21 @@
 
 	<div class="video_section">
 		<div class="background_image">
-			<img src="{% static 'images/video.jpg' %}" alt="">
+			<img src="{% static 'images/video.jpg' %}" alt="seafood_image">
 		</div>
 		<div class="video_section_content d-flex flex-column align-items-center justify-content-center text-center">
 			<div class="video_section_title">Food for the soul</div>
-			<div class="video_section_icon"><a class="vimeo video_button" href="{% static 'video/seafood.mp4' %}"><i class="fa fa-play" aria-hidden="true"></i></a></div>
+			<div class="video_section_icon"><a class="vimeo video_button" href="{% static 'video/seafood.mp4' %}" aria-label="seafood_video" ><i class="fa fa-play" aria-hidden="true"></i></a></div>
 		</div>
 	</div>
 
 	<!-- Signature Dish -->
 
-	<div class="sig">
+	<div class="sig" style="height: 550px;">
 		<div class="sig_content_container">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-7">
+					<div class="col-lg-7" style="margin-bottom: 50px;">
 						<div class="sig_content">
 							<div class="sig_subtitle page_subtitle">Something new</div>
 							<div class="sig_title"><h1>Our Signature Dish</h1></div>
@@ -82,24 +82,11 @@
 									<li>Veggies</li>
 								</ul>
 							</div>
-							<div class="chef_button ml-auto mr-auto trans_400 text-center"><a href="#">Order Now</a></div>
 						</div> 
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="sig_image_container">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-7 offset-lg-5">
-						<div class="sig_image">
-							<img src="{% static 'images/blog_1.jpg' %}" alt="https://unsplash.com/@juanmramosjr">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 	</div>
-
 
 {% endblock %}

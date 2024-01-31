@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Homepage{% endblock %}
+{% block title %}Make a Reservation{% endblock %}
 
 {% block content %}
 
     
     <div class="home" style="width: 100vw; height: 100vh;">
-        <div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{% static 'images/home.jpg' %}" data-speed="0.8"></div>
+        <div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{% static 'images/home.jpg' %}" data-speed="0.8" alt="home_image"></div>
 		<div class="home_container">
 			<div class="container">
 				<div class="row">
@@ -28,6 +28,8 @@
     <div class="card mt-3" style="color: black;">
         <div class="card-header">
             <h1>My Reservations</h1>
+
+            {% include 'messages.html' %}
         </div>
         <div class="card-body">
             <ul class="list-group mt-3">
@@ -38,12 +40,12 @@
                     <strong>Table:</strong> {{ reservation.table }} | 
                     <strong>Guests:</strong> {{ reservation.guests }}
                 </li>
-                <a href="{% url 'edit_reservation' reservation.id %}">Edit Reservation</a> or <a href="{% url 'delete_reservation' reservation.id %}">Delete Reservation</a>
+                <a href="{% url 'edit_reservation' reservation.id %}" aria-label="link_edit_reservation">Edit Reservation</a> or <a href="{% url 'delete_reservation' reservation.id %}" aria-label="link_delete_reservation">Delete Reservation</a>
                 {% endfor %}
             </ul>
         </div>
     </div>
-    
+
     <!-- Reservations -->
     <br>
     <form action="{% url 'make_reservation' %}" method="POST" id="res_form" class="res_form" style="color: black; justify-content: center; align-items: center; text-align: center;">

@@ -19,4 +19,4 @@ class Reservation(models.Model):
     guests = models.IntegerField()
 
     def __str__(self):
-        return self.user.username + ' ' + str(self.date) + ' ' + str(self.time) + ' ' + str(self.guests)
+        return self.user.username + ', Date: ' + str(self.date) + ', at ' + str(self.time) + ' for ' + str(self.guests) + ' guests'

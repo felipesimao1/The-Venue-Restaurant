@@ -1,11 +1,13 @@
 {% extends 'base.html' %}
 {% load static %}
+{% block title %}About us{% endblock %}
+
 
 {% block content %}
 <div class="super_container">
 
 <div class="home">
-    <div class="parallax_background parallax-window" data-parallax="scroll" data-image-src=" {% static 'images/about.jpg' %} " data-speed="0.8"></div>
+    <div class="parallax_background parallax-window" data-parallax="scroll" data-image-src=" {% static 'images/about.jpg' %} " data-speed="0.8" alt="aboutus"></div>
     <div class="home_container">
         <div class="container">
             <div class="row">
@@ -27,15 +29,15 @@
         <div class="row">
             <div class="col">
                 <div class="intro_content">
-                    <div class="intro_subtitle page_subtitle">Something new</div>
-                    <div class="intro_title"><h2>An Extraordinery Experience</h2></div>
+                    <div class="intro_subtitle page_subtitle">About Us</div>
+                    <div class="intro_title"><h2>Pride to serve</h2></div>
                     <div class="intro_text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus. Ut non justo eleifend, facilisis nibh ut, interdum odio. Suspendisse potenti. Vivamus luctus diam eu neque rutrum, vitae aliquet dolor venenatis. Nulla consequat fringilla massa.</p>
+                        <p>At TheVenue Restaurant, we pride ourselves on offering more than just a meal; we provide an unforgettable culinary experience. Nestled in the heart of Anytown, USA, our establishment is more than just a dining destination – it's a haven for food enthusiasts seeking excellence in taste, service, and ambiance. Our team of talented chefs meticulously crafts each dish, sourcing only the freshest, highest quality ingredients to ensure every bite is a revelation of flavor. From classic favorites to innovative creations, our menu showcases a diverse array of culinary delights designed to tantalize even the most discerning palates. But it's not just about the food; it's about the entire dining experience. Our warm and inviting atmosphere, paired with attentive service, creates the perfect setting for any occasion, whether it's a romantic dinner for two, a celebratory gathering with friends, or a business lunch. At TheVenue Restaurant, we're committed to exceeding expectations and creating memories that linger long after the last bite. Join us, and let us redefine your dining experience.</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-8">
-                        <div class="intro_image"><img src="{% static 'images/about_intro.jpg' %} " alt="https://unsplash.com/@quanle2819"></div>
+                        <div class="intro_image"><img src="{% static 'images/about_intro.jpg' %} " alt="about_us_intro"></div>
                     </div>
                 </div>
             </div>	
@@ -58,12 +60,12 @@
         <div class="row chefs_text_row">
             <div class="col-lg-6">
                 <div class="chefs_text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus. Ut non justo eleifend, facilisis nibh ut, interdum odio. Suspendisse potenti. Vivamus luctus diam eu neque rutrum, vitae aliquet dolor venenatis. Nulla consequat fringilla.</p>
+                    <p>"At TheVenue Restaurant, our team of four talented chefs brings a wealth of expertise to the table. From exquisite French cuisine to bold Asian flavors, each chef specializes in a distinct culinary realm, ensuring a diverse and memorable dining experience for our guests."</p>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="chefs_text">
-                    <p>Sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus. Ut non justo eleifend, facilisis nibh ut, interdum odio. Suspendisse potenti. Vivamus luctus diam eu neque rutrum, vitae aliquet dolor venenatis. Nulla consequat fringilla.</p>
+                    <p>"Our chefs' dedication to innovation and mastery of their craft shines through in every dish they create, promising an extraordinary fusion of flavors and culinary artistry at TheVenue Restaurant."</p>
                 </div>
             </div>
         </div>
@@ -72,11 +74,10 @@
             <!-- Chef -->
             <div class="col-xl-3 col-md-6 chef_col d-flex flex-column align-items-center justify-content-end">
                 <div class="chef">
-                    <div class="chef_image"><img src="{% static 'images/chef_1.jpg' %}" alt=""></div>
+                    <div class="chef_image"><img src="{% static 'images/chef_1.jpg' %}" alt="chef_1"></div>
                     <div class="chef_content text-center">
                         <div class="chef_name">Maria Smith</div>
                         <div class="chef_subtitle">Top Chef</div>
-                        <div class="chef_button ml-auto mr-auto trans_400"><a href="#">see more</a></div>
                     </div>
                 </div>
             </div>
@@ -84,11 +85,10 @@
             <!-- Chef -->
             <div class="col-xl-3 col-md-6 chef_col d-flex flex-column align-items-center justify-content-end">
                 <div class="chef">
-                    <div class="chef_image"><img src="{% static 'images/chef_2.jpg' %}" alt=""></div>
+                    <div class="chef_image"><img src="{% static 'images/chef_2.jpg' %}" alt="chef_2"></div>
                     <div class="chef_content text-center">
                         <div class="chef_name">William Jones</div>
                         <div class="chef_subtitle">Sauce Chef</div>
-                        <div class="chef_button ml-auto mr-auto trans_400"><a href="#">see more</a></div>
                     </div>
                 </div>
             </div>
@@ -96,11 +96,10 @@
             <!-- Chef -->
             <div class="col-xl-3 col-md-6 chef_col d-flex flex-column align-items-center justify-content-end">
                 <div class="chef">
-                    <div class="chef_image"><img src="{% static 'images/chef_3.jpg' %}" alt=""></div>
+                    <div class="chef_image"><img src="{% static 'images/chef_3.jpg' %}" alt="chef_3"></div>
                     <div class="chef_content text-center">
                         <div class="chef_name">Julien Williams</div>
                         <div class="chef_subtitle">Sushi Chef</div>
-                        <div class="chef_button ml-auto mr-auto trans_400"><a href="#">see more</a></div>
                     </div>
                 </div>
             </div>
@@ -108,24 +107,16 @@
             <!-- Chef -->
             <div class="col-xl-3 col-md-6 chef_col d-flex flex-column align-items-center justify-content-end">
                 <div class="chef">
-                    <div class="chef_image"><img src="{% static 'images/chef_4.jpg' %}" alt=""></div>
+                    <div class="chef_image"><img src="{% static 'images/chef_4.jpg' %}" alt="chef_4"></div>
                     <div class="chef_content text-center">
                         <div class="chef_name">Suzie James</div>
                         <div class="chef_subtitle">Sauce Chef</div>
-                        <div class="chef_button ml-auto mr-auto trans_400"><a href="#">see more</a></div>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </div>
-
-
-
-
-
-
 
 
 {% endblock %}

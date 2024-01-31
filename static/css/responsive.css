@@ -79,10 +79,6 @@
 	{
 		position: relative;
 		top: auto;
-		-webkit-transform: none;
-		-moz-transform: none;
-		-ms-transform: none;
-		-o-transform: none;
 		transform: none;
 		right: auto;
 		margin-bottom: 102px;
@@ -136,10 +132,6 @@
 		position: relative;
 		top: auto;
 		left: auto;
-		-webkit-transform: none;
-		-moz-transform: none;
-		-ms-transform: none;
-		-o-transform: none;
 		transform: none;
 		width: 100%;
 		z-index: 1;

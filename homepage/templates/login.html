@@ -1,14 +1,16 @@
 {% extends 'base.html' %}
 {% load static %}
+{% block title %}Login{% endblock %}
 
 {% block content %}
 <div class="home" style="width: 100vw; height: 100vh;">
-    <div class="parallax_background parallax-window" data-parallax="scroll" data-image-src=" {% static 'images/about.jpg' %} " data-speed="0.8"></div>
+    <div class="parallax_background parallax-window" data-parallax="scroll" data-image-src=" {% static 'images/about.jpg' %} " data-speed="0.8" alt="about_us"></div>
     <div class="home_container">
         <div class="container">
             <div class="row">
                 <div class="col">
                     <div class="home_content text-center">
+                        {% include 'messages.html' %}
                         <div class="home_title"><h1>Login</h1></div>
                         <form action="{% url 'login'%}" method="POST" id="res_form" class="res_form" >
                             {% csrf_token %}
@@ -24,5 +26,4 @@
         </div>
     </div>
 </div>
-
 {% endblock %}
