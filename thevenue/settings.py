@@ -9,22 +9,28 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
-
-from pathlib import Path
-#import dj_database_url
 import os
+from pathlib import Path
+import dj_database_url
+import env 
 
+if os.path.isfile("env.py"):
+    import env
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-DATABASE_URL = os.getenv('DATABASE_URL')
+
+SECRET_KEY = os.environ.get('SECRET_KEY')
+
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-3o6mg7s#cg25brf)2lw7s@m)2&gs(2-+x63dw&yi%u6lq%q1$='
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -96,21 +102,20 @@ WSGI_APPLICATION = 'thevenue.wsgi.application'
 #    }
 #}
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        'NAME': 'thevenue_db_elephant',
-        'USER': 'postgres',
-        'PASSWORD': 'admin123',
-        'HOST': 'postgres://lqqzzzha:ixkFeXDUiwAsceaJgtOAXlZ2DvlMuxCX@kandula.db.elephantsql.com/lqqzzzha',
-        'PORT': '5432',
-    }
-}
-
 #DATABASES = {
-#    'default': dj_database_url.config(default=DATABASE_URL)
+#    "default": {
+#        "ENGINE": "django.db.backends.postgresql",
+#        'NAME': 'thevenue_db_elephant',
+#        'USER': 'postgres',
+#        'PASSWORD': 'admin123',
+#        'HOST': 'postgres://lqqzzzha:ixkFeXDUiwAsceaJgtOAXlZ2DvlMuxCX@kandula.db.elephantsql.com/lqqzzzha',
+#        'PORT': '5432',
+#    }
 #}
 
+DATABASES = {
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
