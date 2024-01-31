@@ -15,10 +15,10 @@
                         <form action="{% url 'signup'%}" method="POST" id="res_form" class="res_form">
                             {% csrf_token %}
                             <div class="align-items-center justify-content-center">
-                                <input type="text" id="" class="res_input" name="username" placeholder="Username" required="required">
-                                <input type="email" id="" class="res_input" name="email" placeholder="Email" required="required">
-                                <input type="password" class="res_input" name="password" placeholder="Password" required="required">
-                                <input type="password" class="res_input" name="password2" placeholder="Confirm Password" required="required">
+                                <input type="text" id="text" class="res_input" name="username" placeholder="Username" required="required">
+                                <input type="email" id="email" class="res_input" name="email" placeholder="Email" required="required">
+                                <input type="password" id="password" class="res_input" name="password" placeholder="Password" required="required">
+                                <input type="password" id="password" class="res_input" name="password2" placeholder="Confirm Password" required="required">
                                 
                             </div>
                             <button class="res_button">Sign Up</button> <br> <br>
