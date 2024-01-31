@@ -41,13 +41,13 @@ python manage.py runserver
    
 
 ## Project Overview
-1.[Homepage](#homepage)
-2.[Login Page](#loginpage)
-3.[Sign Up](#signup)
-4.[Mobile Navigation](#mobilenavbar)
-5.[Logged and Make a reservation](#LoggedandMakeareservation)
-6.[Edit Reservation](#editingreservation)
-7.[Confirm Reservation](#confirmreservation)
+1. Homepage
+2. Login Page
+3. Sign Up
+4. Mobile Navigation
+5. Logged and Make a reservation
+6. Edit Reservation
+7. Confirm Reservation
 
 ## Homepage:
 ![Screenshot 2024-01-31 030950](https://github.com/felipesimao1/The-Venue-Restaurant/assets/31260554/13b91797-89da-4fc3-974f-d9e7b2f0aadc)
